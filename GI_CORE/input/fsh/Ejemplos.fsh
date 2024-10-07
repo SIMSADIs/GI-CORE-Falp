@@ -122,7 +122,7 @@ Description: "An example Prestación de Salud instance."
 
 * extension[NombreSeguro].valueString = "MEGA TRONIX 1000"
 
-* extension[Referencia].valueReference = Reference(EjPaciente)
+//* extension[Referencia].valueReference = Reference(EjPaciente)
 
 //SOLICITUD DEL PROCEDIMIENTO //
 Instance: EjSolicitudProcedimiento
@@ -205,9 +205,8 @@ Description: "An example Prestador individual instance."
 * name.family = "Gonzaléz"
 * name.given = "Pedro"
 * birthDate = "1980-12-25" 
-/*
 
-*/
+
 //* identifier.use = #official
 //* identifier.type = #MD "Medical License number"
 * identifier.system = "https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSIdentificadores"
@@ -220,12 +219,12 @@ Description: "An example Prestador individual instance."
 * address.state.extension.valueCodeableConcept.coding.system = "https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSCodRegionCL"
 * address.state.extension.valueCodeableConcept.coding.code = #13 "RegionMetropolitana"
 
-* qualification[Cert].code.coding.system = "https://api.minsal.cl/v1/catalogos/profesiones/"
-* qualification[Cert].code.coding.code = #01
+* qualification[Cert].code.coding.system = "https://interoperabilidad.minsal.cl/fhir/ig/eis/CodeSystem/CSTituloProfesional"
+* qualification[Cert].code.coding.code = #1
 
 * extension[Mension].valueString = "NEFROLOGO" 
 
-* qualification[SubEsp].code.coding.system = "https://api.minsal.cl/v1/catalogos/tiposEspecialidadMedica/"
+* qualification[SubEsp].code.coding.system = "https://interoperabilidad.minsal.cl/fhir/ig/eis/CodeSystem/CSEspecialidadMedica"
 * qualification[SubEsp].code.coding.code = #4
 
 // ORGANIZACIÓN // 
