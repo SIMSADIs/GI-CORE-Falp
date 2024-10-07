@@ -5,7 +5,7 @@
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: fhirfalp
 canonical: http://falp.cl
-name: falp
+name: CoreFalp
 title: Guía de Implementación CL FALP
 # description: Example Implementation Guide for getting started with SUSHI
 status: draft # draft | active | retired | unknown

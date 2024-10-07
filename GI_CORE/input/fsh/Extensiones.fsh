@@ -39,6 +39,7 @@ Extension: MyTelecomExtension
 Id: MyTelecomExtension
 Title: "Contacto del acompañante"
 Description: "Contacto del acompañante del paciente"
+Context: Patient.contact.telecom
 //* value[x] only string
 //* valueString 
 
@@ -86,9 +87,9 @@ Extension: FechaSolicitud
 Id: Fecha-Solicitud
 Title: "Fecha de Solicitud"
 Description: "Fecha en que se realizó la solicitud del procedimiento."
-//Context: Procedure
+Context: Condition , Procedure
 * value[x] only dateTime 
-//* DateTime
+
 
 //REPORTE DE PROCEDIMIENTO//
 
@@ -96,7 +97,7 @@ Extension: TipoProcedimiento
 Id:  TipoProcedimiento
 Title: "Set de códigos de tipos de procedimientos"
 Description: "Set de códigos de tipos de procedimientos"
-//Context: Procedure/Condition
+Context: Condition , Procedure
 * value[x] only string 
 //* valueString
 /** value[x] only CodeableConcept
@@ -106,12 +107,11 @@ Description: "Set de códigos de tipos de procedimientos"
 */
 
 Extension: FechaProcedimiento
-Id: Fecha-Procedimiento
+Id: FechaProcedimiento
 Title: "Fecha de Procedimiento"
 Description: "Fecha en que se realizó el procedimiento."
 Context: Condition 
 * value[x] only dateTime 
-* DateTime
 
 Extension: UrgenciaProcedimiento
 Id: UrgenciaProcedimiento
@@ -127,7 +127,7 @@ Extension: Observacion
 Id: Observacion 
 Title: "Observación"
 Description: "Alguna observación para el procedimiento"
-//Context: Procedure
+Context: Condition , Procedure
 //* value[x] only string 
 //* valueString
 
@@ -231,4 +231,5 @@ Extension: Referencia
 Id: Referencia
 Title: "Referencia"
 Description: "Referencia Paciente"
-//* value[x] only Reference(Paciente) 
+Context: Condition , Procedure
+* value[x] only Reference(Paciente) 

@@ -41,15 +41,9 @@ Description: "An example Patient instance."
 * address.state.extension.valueCodeableConcept.coding.system = "https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSCodRegionCL"
 * address.state.extension.valueCodeableConcept.coding.code = #13 "RegionMetropolitana"
 
-//* contact.extension.url = "tutId"
 
 * contact.relationship.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0131"
 * contact.relationship.coding.code = #N "Next of Kin"
-
-//* contact.extension.extension.url = "http://hl7.org/fhir/ValueSet/identifier-use"
-//* contact.extension.extension[0].valueIdentifier.use = #official "Official"
-//* contact.extension.extension[0].valueIdentifier.system = "http://hl7.org/fhir/identifier-use"
-//* contact.extension.extension[0].valueIdentifier.value = "8987321-7"
 
 * contact.address.use = #home
 * contact.address.line[0] = "Gregorio Mira 123" 
@@ -57,7 +51,7 @@ Description: "An example Patient instance."
 * contact.address.state.extension.url = "https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/RegionesCl"
 * contact.address.state.extension.valueCodeableConcept.coding.system = "https://hl7chile.cl/fhir/ig/clcore/CodeSystem/RegionesCl"
 * contact.address.state.extension.valueCodeableConcept.coding.code = #13 "RegionMetropolitana"
-//* contact.address.state.extension.valueCodeableConcept.coding.display = "RegionMetropolitana"
+
 
 //* contact.name.url = "https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/IdContacto" //falta agregar identificaor del acompañante revisar bien todo lo que tenga que ver con el contacto 
 * contact.name.use =  #official
@@ -73,24 +67,9 @@ Description: "An example Patient instance."
 * contact.extension.extension.valueIdentifier.type.coding.system = "https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSIdentificadores"
 * contact.extension.extension.valueIdentifier.type.coding.code = #3
 * contact.extension.extension.valueIdentifier.type.coding.display = "PPN"
-// * contact.extension.valueIdentifier.use = #152 "Chile"   creo que este no sirve, hay otro arriba
 * contact.extension.extension.valueIdentifier.system = "http://regcivil.cl/Validacion/RUN"
 * contact.extension.extension.valueIdentifier.value = "12.435.789-k"
 
-/*
-* contact.extension.url = "tutId"
-* contact.extension.valueIdentifier.use = #official "Official"
-//* contact.extension.extension.valueIdentifier.type = #PPN 
-* contact.extension.valueIdentifier.type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
-* contact.extension.valueIdentifier.type.coding.code = #PPN
-* contact.extension.valueIdentifier.type.coding.display = "Passport number"
-// * contact.extension.valueIdentifier.use = #152 "Chile"   creo que este no sirve, hay otro arriba
-* contact.extension.valueIdentifier.system = "http://regcivil.cl/Validacion/RUN"
-* contact.extension.valueIdentifier.value = "12.435.789-k"
-*/
-
-//* contact.telecom[0].url = "http://hl7.org/fhir/ValueSet/contact-point-use"
-//* contact.telecom[0].extension.url = "http://hl7.org/fhir/ValueSet/contact-point-system"
 * contact.telecom[0].system = #phone
 * contact.telecom[0].value = "+56912345678"
 * contact.telecom[0].use = #mobile
@@ -110,7 +89,7 @@ Description: "An example Prestación de Salud instance."
 * id = "example-coverage"
 * status = #active
 * beneficiary = Reference(EjPaciente)
-* payor[0] = Reference(example-Organizacion)
+* payor[0] = Reference(EjOrganizacion)
 
 * extension[PrevisionSalud].valueCodeableConcept.coding.system = "https://interoperabilidad.minsal.cl/fhir/ig/eis/CodeSystem/CSPrevision"
 * extension[PrevisionSalud].valueCodeableConcept.coding.code = #1 "FONASA"
@@ -161,7 +140,8 @@ Description: "An example Reporte del Procedimiento instance."
 * subject = Reference(EjPaciente) 
 
 * extension[FechaSolicitud].valueDateTime = "2024-07-03"
-* extension[FechaProcedimiento].valueDateTime = "2024-05-15"
+
+* extension[FechaProcedimiento].valueDateTime = "2024-09-15"
 
 * extension[TipoProcedimiento].valueString = "BIOPSIA"
 
@@ -219,13 +199,17 @@ Description: "An example Prestador individual instance."
 * address.state.extension.valueCodeableConcept.coding.system = "https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSCodRegionCL"
 * address.state.extension.valueCodeableConcept.coding.code = #13 "RegionMetropolitana"
 
-* qualification[Cert].code.coding.system = "https://interoperabilidad.minsal.cl/fhir/ig/eis/CodeSystem/CSTituloProfesional"
-* qualification[Cert].code.coding.code = #1
-
 * extension[Mension].valueString = "NEFROLOGO" 
 
+* qualification[Cert].identifier.value = "cert"
+* qualification[Cert].code.coding.system = "https://interoperabilidad.minsal.cl/fhir/ig/eis/CodeSystem/CSTituloProfesional"
+* qualification[Cert].code.coding.code = #1
+* qualification[Cert].code.text = "Certificado(s)"
+
+* qualification[SubEsp].identifier.value = "subesp"
 * qualification[SubEsp].code.coding.system = "https://interoperabilidad.minsal.cl/fhir/ig/eis/CodeSystem/CSEspecialidadMedica"
 * qualification[SubEsp].code.coding.code = #4
+* qualification[SubEsp].code.text = "SubEspecialidad(es)"
 
 // ORGANIZACIÓN // 
 
@@ -279,23 +263,3 @@ Description: "An example Localizacion instance."
 * position.latitude = 51.5074
 * position.longitude = -0.1278 
 * managingOrganization = Reference(EjOrganizacion)
-
-
-/*Instance: EjGenero
-InstanceOf: Genero 
-Usage: #inline
-Title: "EjGenero"
-Description: "Ejemplo para extension de género"
-
-* valueCodeableConcept.coding.system = "https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSIdentidaddeGenero"
-* valueCodeableConcept.coding.code = #7
-* valueCodeableConcept.coding.display = "No Revelado"*/
-
-
-Instance: EjFechaProcedimiento
-InstanceOf: Fecha-Procedimiento
-Usage: #inline
-Title: "EjFechaProcedimiento"
-Description: "Ejemplo para extension fecha de procedimiento"
-
-* valueDateTime = "2024-08-02"
