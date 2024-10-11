@@ -14,5 +14,3 @@ Description: "Perfil de la Organización de Salud"
   * city 1..1
   * district 1..1
   * state 1..1 
-
-

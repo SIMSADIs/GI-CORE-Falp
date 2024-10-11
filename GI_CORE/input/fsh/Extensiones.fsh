@@ -1,14 +1,3 @@
-/*Extension: Genero
-Id: Genero
-Title: "Codigos de Identidad de Genero"
-Description: "La vivencia interna e individual del género tal como cada persona la sienta profundamente"
-Context: Patient
-* value[x] only CodeableConcept
-  * ^short = "Identidad de género"
-* valueCodeableConcept from https://hl7chile.cl/fhir/ig/clcore/ValueSet/VSIdentidaddeGenero
-  * ^binding.description = "Tabla de codigos de identidad de género"  
-*/
-
 Extension: SexoBiologico
 Id: SexoBiologico
 Title: "Sexo biólogico"
@@ -29,20 +18,12 @@ Context: Patient
 * valueCodeableConcept from https://hl7chile.cl/fhir/ig/clcore/ValueSet/CodPais
   * ^binding.description = "Tabla de Nacionalidad"
 
-//Extension: IdContacto
-//Id: IdContacto
-//Title: "Identificador de Contacto"
-//Description: "Identificador único para el contacto del paciente"
-//* value[x] only string
-
 Extension: MyTelecomExtension
 Id: MyTelecomExtension
 Title: "Contacto del acompañante"
 Description: "Contacto del acompañante del paciente"
 Context: Patient.contact.telecom
-//* value[x] only string
-//* valueString 
-
+* value[x] only string
 
 //COVERAGE//
 
@@ -99,12 +80,7 @@ Title: "Set de códigos de tipos de procedimientos"
 Description: "Set de códigos de tipos de procedimientos"
 Context: Condition , Procedure
 * value[x] only string 
-//* valueString
-/** value[x] only CodeableConcept
-  * ^short = "Tipos de procedimientos"
-* valueCodeableConcept from http://hl7.org/fhir/ValueSet/procedure-code
-  * ^binding.description = "Tipos de procedimientos"
-*/
+
 
 Extension: FechaProcedimiento
 Id: FechaProcedimiento
@@ -128,8 +104,8 @@ Id: Observacion
 Title: "Observación"
 Description: "Alguna observación para el procedimiento"
 Context: Condition , Procedure
-//* value[x] only string 
-//* valueString
+* value[x] only string 
+
 
 //DIAGNÓSTICO//
 
@@ -139,7 +115,6 @@ Title: "Fecha de Diagnóstico"
 Description: "Fecha en que se realizó el diagnóstico."
 Context: CoreDiagnosticoCl
 * valueDateTime 
-
 
 // HISTORIA CLINICA //
 
@@ -160,18 +135,6 @@ Context: CoreDiagnosticoCl
   * ^short = "Severidad Diagnóstica"
 * valueCodeableConcept from VSseveridadDiagnostica
   * ^binding.description = "Valoración subjetiva de la gravedad de la enfermedad evaluada por el clínico"
-
-/*Extension: ObservacionD
-Id: ObservacionD
-Title: "Observación"
-Description: "Alguna observación que se tenga del diagnóstico"
-Context: CoreDiagnosticoCl
-* value[x] only string 
-* valueString
-*/ 
-
-
-// HISTORIA CLINICA //
 
 
 
