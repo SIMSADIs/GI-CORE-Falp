@@ -212,7 +212,6 @@ Description: "An example Prestador individual instance."
 * qualification[SubEsp].code.text = "SubEspecialidad(es)"
 
 // ORGANIZACIÓN // 
-
 Instance: EjOrganizacion
 InstanceOf: Organizacion
 Usage: #Example 
@@ -263,3 +262,8 @@ Description: "An example Localizacion instance."
 * position.latitude = 51.5074
 * position.longitude = -0.1278 
 * managingOrganization = Reference(EjOrganizacion)
+
+
+
+
+
