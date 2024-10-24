@@ -263,7 +263,3 @@ Description: "An example Localizacion instance."
 * position.longitude = -0.1278 
 * managingOrganization = Reference(EjOrganizacion)
 
-
-
-
-
