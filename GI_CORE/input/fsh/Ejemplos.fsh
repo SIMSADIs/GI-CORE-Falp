@@ -13,7 +13,7 @@ Description: "Ejemplo de un paciente con las necesidades de la FALP"
 
 
 * name[NombreOficial].family = "Perez"
-* name[NombreOficial].given[0] = "Juan"
+* name[NombreOficial].given[0] = "Franchesco"
 * name[NombreOficial].use = #official
 
 * birthDate = "1980-01-01"
