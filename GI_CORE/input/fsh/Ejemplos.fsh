@@ -1,8 +1,8 @@
 Instance: EjPaciente
 InstanceOf: Paciente 
 Usage: #Example
-Title: "Example Patient"
-Description: "An example Patient instance."
+Title: "Ejemplo paciente FALP"
+Description: "Ejemplo de un paciente con las necesidades de la FALP"
 
 
 * extension[Sexobiologico].valueCodeableConcept.coding.system = "https://interoperabilidad.minsal.cl/fhir/ig/eis/CodeSystem/CSSexoBiologico"
