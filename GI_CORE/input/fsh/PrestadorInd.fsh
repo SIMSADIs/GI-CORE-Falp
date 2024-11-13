@@ -15,10 +15,12 @@ Description: "Perfil del Prestador Individual"
   * state 1..1 
 
 * extension contains Mension named Mension 0..1 
-
+/*
 * qualification[Cert] 0..*
   * identifier.value = "cert"
 * qualification[Esp] 0..*
   * identifier.value = "esp"
 * qualification[SubEsp] 0..1
   * identifier.value = "subesp"
+*/
+

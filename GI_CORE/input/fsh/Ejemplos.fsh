@@ -200,7 +200,7 @@ Description: "An example Prestador individual instance."
 * address.state.extension.valueCodeableConcept.coding.code = #13 "RegionMetropolitana"
 
 * extension[Mension].valueString = "NEFROLOGO" 
-
+/*
 * qualification[Cert].identifier.value = "cert"
 * qualification[Cert].code.coding.system = "https://interoperabilidad.minsal.cl/fhir/ig/eis/CodeSystem/CSTituloProfesional"
 * qualification[Cert].code.coding.code = #1
@@ -210,7 +210,7 @@ Description: "An example Prestador individual instance."
 * qualification[SubEsp].code.coding.system = "https://interoperabilidad.minsal.cl/fhir/ig/eis/CodeSystem/CSEspecialidadMedica"
 * qualification[SubEsp].code.coding.code = #4
 * qualification[SubEsp].code.text = "SubEspecialidad(es)"
-
+*/
 // ORGANIZACIÓN // 
 Instance: EjOrganizacion
 InstanceOf: Organizacion
