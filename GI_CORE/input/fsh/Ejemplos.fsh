@@ -64,9 +64,9 @@ Description: "Ejemplo de un paciente con las necesidades de la FALP"
 * contact.extension.extension.url = "tutId"
 * contact.extension.extension.valueIdentifier.use = #official "Official"
 //* contact.extension.extension.valueIdentifier.type = #PPN 
-* contact.extension.extension.valueIdentifier.type.coding.system = "https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSIdentificador"
-* contact.extension.extension.valueIdentifier.type.coding.code = #3
-* contact.extension.extension.valueIdentifier.type.coding.display = "PPN"
+* contact.extension.extension.valueIdentifier.type.coding.system = "https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSTipoIdentificador"
+* contact.extension.extension.valueIdentifier.type.coding.code = #01
+* contact.extension.extension.valueIdentifier.type.coding.display = "Rol Único Nacional o RUN"
 * contact.extension.extension.valueIdentifier.system = "http://regcivil.cl/Validacion/RUN"
 * contact.extension.extension.valueIdentifier.value = "12.435.789-k"
 
@@ -192,8 +192,8 @@ Description: "An example Prestador individual instance."
 * identifier.system = "https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSIdentificadores"
 * identifier.value = "15.666.378-2"
 * identifier.type.coding.system = "https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSTipoIdentificador"
-* identifier.type.coding.code = #2
-* identifier.type.coding.display = "RNPI"
+* identifier.type.coding.code = #01
+* identifier.type.coding.display = "Rol Único Nacional o RUN"
 
 * address.state.extension.url = "https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/RegionesCl"
 * address.state.extension.valueCodeableConcept.coding.system = "https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSCodRegionCL"
