@@ -49,7 +49,7 @@ Description: "Ejemplo de un paciente con las necesidades de la FALP"
 * contact.address.line[0] = "Gregorio Mira 123" 
 
 * contact.address.state.extension.url = "https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/RegionesCl"
-* contact.address.state.extension.valueCodeableConcept.coding.system = "https://hl7chile.cl/fhir/ig/clcore/CodeSystem/RegionesCl"
+* contact.address.state.extension.valueCodeableConcept.coding.system = "https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSCodRegionCL"
 * contact.address.state.extension.valueCodeableConcept.coding.code = #13 "RegionMetropolitana"
 
 
@@ -64,7 +64,7 @@ Description: "Ejemplo de un paciente con las necesidades de la FALP"
 * contact.extension.extension.url = "tutId"
 * contact.extension.extension.valueIdentifier.use = #official "Official"
 //* contact.extension.extension.valueIdentifier.type = #PPN 
-* contact.extension.extension.valueIdentifier.type.coding.system = "https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSIdentificadores"
+* contact.extension.extension.valueIdentifier.type.coding.system = "https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSIdentificador"
 * contact.extension.extension.valueIdentifier.type.coding.code = #3
 * contact.extension.extension.valueIdentifier.type.coding.display = "PPN"
 * contact.extension.extension.valueIdentifier.system = "http://regcivil.cl/Validacion/RUN"
@@ -191,7 +191,7 @@ Description: "An example Prestador individual instance."
 //* identifier.type = #MD "Medical License number"
 * identifier.system = "https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSIdentificadores"
 * identifier.value = "15.666.378-2"
-* identifier.type.coding.system = "https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSIdentificadores"
+* identifier.type.coding.system = "https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSTipoIdentificador"
 * identifier.type.coding.code = #2
 * identifier.type.coding.display = "RNPI"
 
