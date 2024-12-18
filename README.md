@@ -6,7 +6,7 @@ La Fundación Arturo López Pérez trabaja integralmente con los pacientes con c
 
 Como solución, la FALP, comenzó con el desarrollo de modelos interoperables en salud, que permitan un asegurar el sguimiento de un paciente y su continuidad asistencial. Anteriormente, se realizaron dos guías de implementación y para este proyecto se planteo una tercera guía. Sin embargo, debido a algunas deficiencias técnicas en las guías anteriores, se realizará la corrección de estas guías, su validación contra el estándar y la tercera guía. Esta ultima guía mencionada, permitirá realizar resumenes clinicos interoperables,
 
-En este documento se abordarán pricipalmente aspectos técnicos de la guia de imlementación, para mayor información no técnica, revisar el articulo realizado tambien durante la realización del trabajo. Lo puede encontrar en el repositorio de la biblioteca UV como "Diseño de guía de implementación  basada en estándar FHI para resumenes IPS para la fundación Arturo López Pérez" o comunicarse al correo esteban.fredes.pizarro@gmail.com. 
+En este documento se abordarán pricipalmente aspectos técnicos de la guia de imlementación, para mayor información **no técnica**, revisar el articulo realizado tambien durante la realización del trabajo. Lo puede encontrar en el repositorio de la biblioteca UV como "Diseño de guía de implementación  basada en estándar FHI para resumenes IPS para la fundación Arturo López Pérez" o comunicarse al correo esteban.fredes.pizarro@gmail.com. 
 
 Los aspectos técnicos que se abordarán es: 
 
@@ -35,8 +35,12 @@ Programas que se deben instalar:
 #### Variables de entorno
 Se recomienda instalar java en las variables de entorno
 
-1. Busque variables de entorno en el buscador de windows
-2. 
+1. Busque "editar las variables de entorno" en el buscador de windows
+2. En la segunda ventana "variables de sistema" piche "path" y luego el botón editar
+3. Se abrira una ventana y seleccione "examinar"
+4. Busque la rute donde se instala ./java/bin y seleccione
+5. En la ventana "variables de usuario" pinche botón "nuevo"
+6. Cree una variable JAVA_HOME y busque la carpeta C:\Program Files\Java\jdk-17 (debería ser donde se instaló java jdk)
 
 #### Instalación de Sushi
 
@@ -74,11 +78,54 @@ Esta etapa es válida si utiliza el editor de código VS Code, se desconoce el p
 
 El uso de estas extensiones no es completamente obligatorio, pero se recomienda en gran medida, ya que facilita la creación de artefactos.
 
-
-
 ## Creación de la guía
 
+Una vez completada la instalación de programas y los pasos extras, se procede con la creacion de la guía. Para eso debe dirigirse a VS Code y seguir los pasos que se enumeran a continuación
+
+1. Dentro del editor, debe dirigerse desde el terminal hacia la carpeta C:/ utilizando el comando 
+
+```
+cd..
+```
+
+O bien, abrir directamente esa carpeta. 
+
+2. Utilize el comando 
+
+```
+sushi init
+```
+Comience a rellenar la información que se le solicita, se recomienda : 
+
+  *  Name 
+* Id: Utilizar de preferencia formato "hl7.fhir.cl.nombreguia", más adelante evitará errores
+* Canonical: Utilizar de preferencia formato "http://nombreguia.cl/fhir/ig/nombreguia/" para evitar errores más adelante
+* Status: Se recomienda dejar valor default
+* Version: Se recomienda dejar valor default
+* Release Label: Se recomienda dejar valor default
+* Publisher Name: Su nombre o nombre de organización 
+* Publisher Url: Su url si aplica.
+* Colocar "y" al mensaje que aparece en el terminal 
+
+Ahora se encuentra creada la guía, la configuración puede ser modificada en caso de que sea necesario en un futuro. 
+
+3. Pruebe que la guia haya sido creada con éxito. Utilice el comando 
+
+```
+sushi .
+```
+
+Asegurese de encontrarse ne la carpeta correcta, si no le aparecerá un error en el terminal.
+
 ## Creación de artefactos
+
+La guía ya se encuetra creada, pero contiene solo el perfil paciente por defecto. 
+
+A partir de ahora comienza la creación de los perfiles o perfilado de una guía de implementación, especifica para cada caso de uso y dependerá de las necesidades que se quieran cubrir con el estándar. 
+
+A continuación se detallará la creación de algunos artefactos que se desarrollaron durante el proceso de perfilado. Estos artefactos deben ser creados en la carpeta input generada con la guía  
+
+
 
 ## Validación de la guía 
 
