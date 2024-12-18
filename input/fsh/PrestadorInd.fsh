@@ -1,6 +1,6 @@
-Profile: PrestadorIndividual 
+Profile: PrestadorIndividualFalp
 Parent: CorePrestadorCl
-Id: PrestadorIndividual
+Id: PrestadorIndFalp
 Title: "Prestador Indivual"
 Description: "Perfil del Prestador Individual"
 

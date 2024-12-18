@@ -177,7 +177,7 @@ Description: "An example Historia Clínica instance."
 
 // PRESTADOR INDIVIDUAL  //
 Instance: EjPrestadorIndividual
-InstanceOf: PrestadorIndividual
+InstanceOf: PrestadorIndFalp
 Usage: #Example 
 Title: "Example Prestador Individual"
 Description: "An example Prestador individual instance." 

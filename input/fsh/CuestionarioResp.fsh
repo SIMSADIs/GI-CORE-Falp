@@ -12,5 +12,5 @@ Description: "Historia clinica respecto a diagnóstico previos si posee el Pacie
 * subject 1..1
 * subject only Reference(PacienteFalp)
 * authored 1..1
-* author only Reference (PrestadorIndividual or Organizacion)
+* author only Reference (PrestadorIndFalp or Organizacion)
 
