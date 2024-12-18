@@ -115,7 +115,7 @@ Description: "An example Solicitud del Procedimiento instance."
 * code.coding.system = "http://snomed.info/sct"
 * code.coding.code = #5738003 "Open biopsy of bronchus"
 
-* extension[UrgenciaProcedimiento].valueCodeableConcept.coding.system = "https://FALP.cl/CodeSystem/CSurgProcedimiento"
+* extension[UrgenciaProcedimiento].valueCodeableConcept.coding.system = "https://falp.cl/fhir/ig/corefalp/CodeSystem/CSurgProcedimiento"
 * extension[UrgenciaProcedimiento].valueCodeableConcept.coding = #MEDIA "MEDIA"
 
 * note.text = "Alergia a la anestesia"

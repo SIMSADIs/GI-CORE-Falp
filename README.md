@@ -414,4 +414,31 @@ Esta etapa consiste en revisar el QA Report y eliminar los errores y warnings pr
 
 ## Configuración final de la guía 
 
+Esta última etapa representa la culminación de las guías, en donde se realiza una mejora visual e informativa a la guía. 
+
+Para esto se realizaron principalmente dos actividades: 
+
+### Mejora informativa de la guía 
+
+Para esta actividad, se rellenaron las pestañas de la GI con información relevante para el entendimiento de estas. Las pestañas se configuran desde el archivo sushi-config.yaml, se crean estas pestañas como archivos .md (Markdown) en la carpeta input/content y se rellenan con texto informativo importante, además de otros elementos, como diagramas plantuml o mermaid, imagenes o tablas. 
+
+Las pestañas que se agregaron fueron principalemte: 
+
+* Inicio: Represtan una introducción a la guía y un resumen de lo más importante
+* Objetivos: Se explicita el objetivo de la guía y posilbes trabajos a futuro con las guías.
+* Casos de uso: esta pestaña esta presente en las guías Informe Biopsia FALP e IPS FALP, explican como funcionan las operaciones representando cada caso de uso. 
+* Artefactos: Esta pestaña agrupa todos los artefactos realiados en cad guía
+* Historial de Cambio: Esta pestaña estpa presente en la GI CORE FALP E Informe Biopsia FALP, y se muestran los cambios realizados entre las diferentes versiones de una guía.
+
+### Cambio de template de las guías
+
+Este fue el último cambio realizado a las guías. El cambio de template representa una personalización de aspectos más visuales y de configuración de la guía. Fue utlizado para establecer los logos de HL7 Chile y la FALP en la parte superior de la guía y cambio de jurisdiction de las guías. 
+
+Para el cambio de template se utilizó la carpeta tempalte de HL7 Chile llamada hl7chile-ig-template, se modificó el archivo _append.fragment-header.html que contiene contiene el código de configuración de los logos. Cambiando la imagen del código y agregando la iamgen a la carpeta content/assets/images, se logró personalizar los logos de la GI. 
+
+Respecto a la jurisdiction, se debe alinear con la jurisdiction establecida en la carpeta tempalte, por eso se tuvo que realizar correciones en algunos puntos de la guía, sobre todo el los archivos sushi-config.yaml. 
+
+Finalmente con la modificiación del archivo ig.ini, donde se establece cual serpa la carpeta de template de la guía, se concluyó la realiazción de las tres guías. 
+
+## Falta el fin del readme
 ```
