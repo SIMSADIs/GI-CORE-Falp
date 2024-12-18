@@ -45,24 +45,34 @@ Pasos para instalar sushi
 1. Abrir cmd (buscar desde el buscador de windows "cmd")
 2. Utilizar comando 
 
-´´´
+```
 cd.. 
-´´´
+```
 
 hasta llegar a la carpeta C:/
 
 3. Utilizar el siguiente comando para instalar sushi
 
-´´´
+```
 -g fsh-sushi
-´´´
+```
 
 4. Verifique si ha sido intalado correctamente utilizando uno de los siguientes comandos
 
-´´´
+```
 sushi help
 sushi -v
-´´´
+```
+
+#### Instalción de extensiones en Visual Studio Code
+
+Esta etapa es válida si utiliza el editor de código VS Code, se desconoce el proceso para otros editores de código
+
+1. Una vez instalado el VS Code, dirigirse a la pestaña de Extensiones en la barra izquierda. 
+2. Buscar la extension "HL7 FHIR ShortHand" e instalarla
+3. Buscar la extension "FHIR tools" e instalarla 
+
+El uso de estas extensiones no es completamente obligatorio, pero se recomienda en gran medida, ya que facilita la creación de artefactos.
 
 
 
