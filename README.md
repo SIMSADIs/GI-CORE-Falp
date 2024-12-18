@@ -374,7 +374,43 @@ Para esta validación es necesario el uso de un script que utiliza la herramient
 ./_updatePublisher.bat
 ```
 
+Una vez realizada la actualización del publisher, no es necesario volver a realizarlo cada vez que se quiere validar la guía, pero es recomendable realizarlo cada cierto tiempo, para mantener actualizada la herramienta. 
 
+El siguiente paso consiste en el renderizado de la guía, mediante el publisher, realiza el renderizado de todos los archivos en las carpetas en un archivos HTML navegables, en otras palabras, muestra la guía tal y como se conocen. 
+
+Este renderrzado se puede realizar principalmente de dos métodos distintos: 
+
+#### Renderizado local
+
+Consiste en utilizar el script 
+
+```
+./_genonce.bat
+```
+
+Para realizar el renderizado local y crear los archivos html navegables para almacenarlos de manera local en la carpeta de la guía. Una parte importante del proceso de publisher es la creación del QA Report, que consiste en un reporte que identifica los errores y warnings de las guías y los muestra de manera resumida, facilitando su ubicación para cumplir con la validación, que consiste en eliminar los errores y warnings.
+
+#### Renderizado a través de AutoBuild FHIR
+
+Para este método se requiere una mayor preparación, sin embargo, tiene la ventaja de guardar la guía en un repositorio en linea, lo que permite acceder más facilmente a esta cuando se quiere utilizar como dependencia para otra guía. 
+
+Se utilizan dos repositorios, GitHub y AutoBuild FHIR. 
+
+1. En primer lugar, se debe crear un repositorio en GitHub y clonar la carpeta local de la guía dentro del repositorio. Para lograr este paso, se debe acceder a GitHub desde el editor de código, aunque se puede realizar de diferentes formas, para este proyecto, se utilizó la pestaña "source control" en la barra izquierda del editor. 
+
+2. Una vez iniciada la sesión, se debe clonar la carpeta de la guía dentro del repositorio. Existen variados turoriales de como realizar esta conexión.
+
+3. Una vez conectado el GitHub con el VS Code, se debe ir a la configuración del repositorio en la página de GitHub y crear un webhook con el repositorio AutoBuild FHIR. La documentación de AutoBuild FHIR explica paso a paso como realizar el webhook y que configuración debe tener (https://github.com/FHIR/auto-ig-builder).
+
+4. El paso final es realizar commits desde le VS Code, lo que realizará de manera automática le guardado de la guía en los repositorios y el renderizado por parte de AutoBuild FHIR. Al igual que el método anterior, genera un reporte de errores y warnings para la posterior validación de la guía
+
+Para que este método funcione, los archivos que se deben subir al GitHub deben ser tal cual estpan en la guía. Se adjunta iamgen de referencia GI CORE FALP.
+
+imagen del git
+
+#### Correción errores y warnings
+
+Esta etapa consiste en revisar el QA Report y eliminar los errores y warnings presentes en las guías. Cada error y warning pueden provenir de diferentes artefactos y pueden tener diferentes razones, por lo que es una etapa poco aplicable a una metodología, se recomienda revisar documentación, ejemplos de otras guías (FSH online, transforma archivos JSON a FSH y viscversa, ideal para revisar la estrucutra de un perfil https://fshonline.fshschool.org/#/) o relizar consultas en el chat oficial de FHIR en la plataforma de foro Zulip (https://chat.fhir.org/). 
 
 ## Configuración final de la guía 
 
