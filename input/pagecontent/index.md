@@ -26,7 +26,7 @@ En la parte superior puede ver la barra de menú, donde aparecen las diferentes 
 Los perfiles que fueron diseñados en esta guía son: 
 
   * [Cuestionario de comorbilidades](StructureDefinition-Cuestionario.html)
-  * [Diagnóstico previo](StructureDefinition-DiagnosticoPrevio.html)
+  * [Condicion Clínica](StructureDefinition-CondicionClinica.html)
   * [Localicación](StructureDefinition-Localizacion.html)
   * [Organización](StructureDefinition-Organizacion.html)
   * [Paciente](StructureDefinition-Paciente.html)
