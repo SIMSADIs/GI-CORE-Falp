@@ -28,6 +28,7 @@ Programas que se deben instalar:
 * node js. link de descarga: https://nodejs.org/en
 * ruby Jeckyll. link de descarga: https://jekyllrb.com/docs/installation/windows/ (seguir las instrucciones de instalación presentes en el link de descarga)
 * Sushi FHIR: Para instalar sushi se deben seguir una serie de comandos en al consola de comandos de su dispositivo. Se detalla más adelante.
+* Editor de código: para este proyecto se utilizó Visual Studio Code, debido a su facilidad para utilizar extensiones
 
 ### Algunos pasos extras
 
@@ -42,10 +43,27 @@ Se recomienda instalar java en las variables de entorno
 Pasos para instalar sushi
 
 1. Abrir cmd (buscar desde el buscador de windows "cmd")
-2. Utilizar comando "cd.." hasta llegar a la carpeta C:/
-3. Utilizar comando 
+2. Utilizar comando 
 
-´-g fsh-sushi´ 
+´´´
+cd.. 
+´´´
+
+hasta llegar a la carpeta C:/
+
+3. Utilizar el siguiente comando para instalar sushi
+
+´´´
+-g fsh-sushi
+´´´
+
+4. Verifique si ha sido intalado correctamente utilizando uno de los siguientes comandos
+
+´´´
+sushi help
+sushi -v
+´´´
+
 
 
 ## Creación de la guía
