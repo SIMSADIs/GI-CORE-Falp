@@ -1,5 +1,5 @@
 Instance: EjPaciente
-InstanceOf: Paciente 
+InstanceOf: PacienteFalp 
 Usage: #Example
 Title: "Ejemplo paciente FALP"
 Description: "Ejemplo de un paciente con las necesidades de la FALP"
@@ -169,7 +169,7 @@ Description: "An example Historia Clínica instance."
 * code.coding.code = #1648002
 * code.coding.display = "Lymphocytic pseudotumor of lung"
 
-* severity.coding.system = "https://FALP.cl/CodeSystem/CSseveridadDiagnostica"
+* severity.coding.system = "https://falp.cl/fhir/ig/corefalp/CodeSystem/CSseveridadDiagnostica"
 * severity.coding.code = #MODERADO "MODERADO"
 
 * note.text = "Pulmón derecho"

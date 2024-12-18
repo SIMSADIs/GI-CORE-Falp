@@ -5,7 +5,7 @@
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: hl7.fhir.cl.corefalp
 canonical: https://falp.cl/fhir/ig/corefalp
-name: corefalp
+name: core_falp
 title: GI CORE FALP
 # description: Example Implementation Guide for getting started with SUSHI
 status: draft # draft | active | retired | unknown

@@ -1,4 +1,4 @@
-Alias: $CSDiab = http://falp.cl/ValueSet/VSDiab
+Alias: $CSDiab = http://falp.cl/fhir/ig/corefalp/ValueSet/VSDiab
 
 Instance: PregCuestionario
 Title: "Questionario de comorbilidades"
@@ -20,7 +20,7 @@ Usage: #Example
 * item[+].linkId = "Diabetes"
 * item[=].text = "Si el paciente padece Diabetes y si es así que tipo"
 * item[=].type = #choice
-* item[=].answerValueSet = "http://falp.cl/ValueSet/VSDiab"
+* item[=].answerValueSet = "http://falp.cl/fhir/ig/corefalp/ValueSet/VSDiab"
 * item[=].required = true
 * item[=].repeats = false 
 
@@ -45,7 +45,7 @@ Description: "Respuestas de cuestionario de comorbilidades"
 
 * identifier.value = "RespCuestionario"
 
-* questionnaire = "http://falp.cl/Questionnaire/PregCuestionario"
+* questionnaire = "http://falp.cl/fhir/ig/corefalp/Questionnaire/PregCuestionario"
 
 * subject.display = "Paciente"
 * authored = "2025-02-07T13:28:17-05:00"

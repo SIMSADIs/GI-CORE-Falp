@@ -1,11 +1,8 @@
-// This is a simple example of a FSH file.
-// This file can be renamed, and additional FSH files can be added.
-// SUSHI will look for definitions in any file using the .fsh ending.
-Profile: Paciente
+Profile: PacienteFalp
 Parent: CorePacienteCl
-Id: Paciente
-Title: "Paciente"
-Description: "Perfil de Paciente"
+Id: PacienteFalp
+Title: "Paciente FALP"
+Description: "Perfil de Paciente FALP"
 
 * extension contains SexoBiologico named Sexobiologico 1..1 
 * extension[SexoBiologico].valueCodeableConcept 1..1

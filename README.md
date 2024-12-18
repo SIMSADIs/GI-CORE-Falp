@@ -441,4 +441,3 @@ Respecto a la jurisdiction, se debe alinear con la jurisdiction establecida en l
 Finalmente con la modificiación del archivo ig.ini, donde se establece cual serpa la carpeta de template de la guía, se concluyó la realiazción de las tres guías. 
 
 ## Falta el fin del readme
-```
