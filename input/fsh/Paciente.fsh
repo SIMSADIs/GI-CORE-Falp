@@ -10,15 +10,19 @@ Description: "Perfil de Paciente"
 * extension contains SexoBiologico named Sexobiologico 1..1 
 * extension[SexoBiologico].valueCodeableConcept 1..1
 * extension contains Nacionalidad named Nacionalidad 1..*
+
 * birthDate 1..1
+
 * identifier 1..* 
-* address
+
+* address 1..* 
 * address only cl-address
   * extension[Geolocalizacion] 0..1
   * city 1..1
   * district 0..1
   * state 0..1 
-* contact
+
+* contact 1..*
 * contact.extension[IdContacto] 0..* 
 * contact.name.family 0..1
 * contact.name.given 0..1

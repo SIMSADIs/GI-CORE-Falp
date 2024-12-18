@@ -24,9 +24,7 @@ Title: "Tramos de Severidad Diagnóstica"
 Description: "Tramos de Severidad Diagnóstica dependiendo de la valoración subjetiva de la gravedad de la enfermedad evaluada por el clínico"
 * ^caseSensitive = true 
 * ^experimental = false   
-//* ^jurisdiction =  urn:iso:std:iso:3166#CL "Chile"
-* ^jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#001 "World"
-* ^version = "0.1.0"
+* ^jurisdiction =  urn:iso:std:iso:3166#CL "Chile"* ^version = "0.1.0"
 * ^status = #active
 * #LEVE "LEVE"
 * #MODERADO "MODERADO"
