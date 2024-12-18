@@ -1,2 +1,7 @@
-# GI-CORE-Falp
-Repositorio con GI CORE basada en estándar FHIR para Fundación Arturo López Pérez
+# Desarrollo de una guía de implementación IPS para la Fundación Arturo López Pérez
+
+
+
+
+
+
